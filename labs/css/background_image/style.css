@@ -1,0 +1,17 @@
+body {
+  background-image: url('https://wallpapers.com/images/hd/all-might-giving-thumbs-up-kkyalhwex0cb3502.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+div.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  margin: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 10px;
+}
