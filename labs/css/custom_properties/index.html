@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Custom Properties</title>
+
+    <style>
+      :root {
+        --background-color: black;
+        --container-background-color: white;
+        --important-text-color: blue;
+        --important-font-weight: 900;
+      }
+
+      body {
+        margin: 0px;
+        padding: 0px;
+        background-color: var(--background-color);
+      }
+
+      div.container {
+        background-color: var(--container-background-color);
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 100vh;
+      }
+
+      h1 {
+        margin: 0px;
+        padding-top: 20px;
+      }
+
+      span.important {
+        color: var(--important-text-color);
+        font-weight: var(--important-font-weight);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Custom Properties</h1>
+      <p>Custom properties, also known as <span class="important">CSS variables</span>, allow you to store <span class="important">values</span> that can be reused throughout your stylesheet.</p>
+    </div>
+  </body>
+</html>
