@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Media Queries</title>
+
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+      }
+
+      div.container {
+        background-color: white;
+        margin-left: 10%;
+        margin-right: 10%;
+        height: 100vh;
+      }
+
+      h1 {
+        margin: 0px;
+        padding: 20px;
+      }
+
+      #content {
+        background-color: lightgray;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+        font-size: 10px;
+      }
+
+      @media (min-width: 576px) {
+        #content {
+          background-color: lightblue;
+          font-size: 20px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        #content {
+          background-color: lightgreen;
+          font-size: 30px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        #content {
+          background-color: lightpink;
+          font-size: 40px;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        #content {
+          background-color: lightyellow;
+          font-size: 50px;
+        }
+      }
+
+      @media (min-width: 1400px) {
+        #content {
+          background-color: lightcoral;
+          font-size: 60px;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Media Queries</h1>
+      <div id="content">
+        <p>Resize the browser window to see the effect.</p>
+      </div>
+    </div>
+  </body>
+</html>
