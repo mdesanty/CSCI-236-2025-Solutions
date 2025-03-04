@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Transitions</title>
+
+    <style>
+      #target {
+        background-color: lightgray;
+        width: 100px;
+        height: 200px;
+        padding: 10px;
+        transition-property: width, height, background-color, color, border-radius;
+        transition-duration: 3s;
+      }
+
+      #target:hover {
+        background-color: purple;
+        width: 200px;
+        height: 100px;
+        color: white;
+        border-radius: 10px;
+        transition-property: width, height, background-color, color, border-radius;
+        transition-duration: 3s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Transitions</h1>
+      <div id="target">The target</div>
+    </div>
+  </body>
+</html>
