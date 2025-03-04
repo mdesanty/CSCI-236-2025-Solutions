@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Size Units</title>
+
+    <style>
+      body {
+        margin: 0rem;
+        padding: 0rem;
+        background-color: black;
+      }
+
+      div.container {
+        background-color: white;
+        margin-left: 10%;
+        margin-right: 10%;
+        height: 100vh;
+      }
+
+      h2 {
+        margin: 0rem;
+        padding: 1.5rem;
+      }
+
+      .container > p {
+        margin: 0rem;
+        padding: 1.5rem;
+        padding-top: 0rem;
+      }
+
+      div.side-by-side {
+        background-color: lightgray;
+        margin: 1rem;
+        padding: 1rem;
+        border: 1px solid black;
+        border-radius: 0.5rem;
+        width: calc(50% - 4.5rem);
+        display: inline-block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Should I use source control?</h2>
+      <p>Here is a comparison of using source control and not using source control.</p>
+
+      <div class="side-by-side">
+        <h3>Using source control</h3>
+        <ul>
+          <li>All files safe and sound in the cloud.</li>
+          <li>Can revert to previous versions of files.</li>
+          <li>Can work with others.</li>
+          <li>Can recover from mistakes.</li>
+        </ul>
+      </div>
+
+      <div class="side-by-side">
+        <h3>Not using source control</h3>
+        <ul>
+          <li>Files only exist on local disks.</li>
+          <li>Cannot revert to previous versions of files.</li>
+          <li>More difficult to work with others.</li>
+          <li>More difficult to recover from mistakes.</li>
+        </ul>
+      </div>
+
+      <p>As you can see, using source control is much better than not using source control.</p>
+    </div>
+  </body>
+</html>
