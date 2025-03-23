@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Grid Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    div.grid {
+      display: grid;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: 1px solid black;
+      padding: 20px;
+      border-radius: 10px;
+      column-gap: 10px;
+      row-gap: 10px;
+    }
+
+    div.grid-item {
+      background-color: lightblue;
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    #section1 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    #section2 {
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    #section3 {
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr 2fr;
+    }
+
+    #section4 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 600px) {
+      #section4 {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Grid Lab</h1>
+
+    <div id="section1" class="grid">
+      <div class="grid-item">One</div>
+      <div class="grid-item">Two</div>
+      <div class="grid-item">Three</div>
+      <div class="grid-item">Four</div>
+      <div class="grid-item">Five</div>
+      <div class="grid-item">Six</div>
+    </div>
+
+    <div id="section2" class="grid">
+      <div class="grid-item">One</div>
+      <div class="grid-item">Two</div>
+      <div class="grid-item">Three</div>
+      <div class="grid-item">Four</div>
+      <div class="grid-item">Five</div>
+      <div class="grid-item">Six</div>
+    </div>
+
+    <div id="section3" class="grid">
+      <div class="grid-item">One</div>
+      <div class="grid-item">Two</div>
+      <div class="grid-item">Three</div>
+      <div class="grid-item">Four</div>
+      <div class="grid-item">Five</div>
+      <div class="grid-item">Six</div>
+    </div>
+
+    <div id="section4" class="grid">
+      <div class="grid-item">One</div>
+      <div class="grid-item">Two</div>
+      <div class="grid-item">Three</div>
+      <div class="grid-item">Four</div>
+      <div class="grid-item">Five</div>
+      <div class="grid-item">Six</div>
+    </div>
+  </div>
+</body>
+
+</html>
