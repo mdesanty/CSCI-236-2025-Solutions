@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>JS Loops</title>
+  </head>
+
+  <body>
+    Nothing to see here
+
+    <script>
+      console.log("But there is something to see here...");
+
+      const numbers = [1, -2, 3, -4, 5];
+
+      let positiveCount = 0;
+      let negativeSum = 0;
+
+      for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > 0) {
+          positiveCount++;
+        } else {
+          negativeSum++;
+        }
+      }
+
+      console.log(`Positive count: ${positiveCount}`);
+      console.log(`Negative sum: ${negativeSum}`);
+    </script>
+  </body>
+</html>
