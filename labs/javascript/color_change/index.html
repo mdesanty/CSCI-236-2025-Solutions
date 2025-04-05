@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Color Changer</title>
+  <style>
+    .container {
+      text-align: center;
+    }
+
+    #colorful-text {
+      padding-top: 15px;
+      padding-bottom: 10px;
+    }
+
+    button {
+      padding: 5px;
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+
+    .blue {
+      color: blue;
+    }
+
+    .green {
+      color: green;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .purple {
+      color: purple;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="text-container">
+      <div id="colorful-text">
+        <h2>Change my color!</h2>
+      </div>
+      <button id="blue-button">Blue</button>
+      <button id="green-button">Green</button>
+      <button id="red-button">Red</button>
+      <button id="purple-button">Red</button>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function () {
+    const blueButton = document.getElementById("blue-button");
+    const greenButton = document.getElementById("green-button");
+    const redButton = document.getElementById("red-button");
+    const prupleButton = document.getElementById("purple-button");
+    const textElement = document.getElementById("colorful-text");
+
+    blueButton.onclick = function () {
+      textElement.classList.add("blue");
+      textElement.classList.remove("green");
+      textElement.classList.remove("red");
+      textElement.classList.remove("purple");
+    }
+
+    greenButton.onclick = function () {
+      textElement.classList.add("green");
+      textElement.classList.remove("blue");
+      textElement.classList.remove("red");
+      textElement.classList.remove("purple");
+    }
+
+    redButton.onclick = function () {
+      textElement.classList.add("red");
+      textElement.classList.remove("blue");
+      textElement.classList.remove("green");
+      textElement.classList.remove("purple");
+    }
+
+    prupleButton.onclick = function () {
+      textElement.classList.add("purple");
+      textElement.classList.remove("blue");
+      textElement.classList.remove("green");
+      textElement.classList.remove("red");
+    }
+  });
+</script>
+
+</html>
