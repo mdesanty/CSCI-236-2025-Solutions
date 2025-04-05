@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>JS Functions</title>
+  </head>
+
+  <body>
+    Nothing to see here
+
+    <script>
+      console.log("But there is something to see here...");
+
+      function processNumbers(numbers) {
+        let positiveCount = 0;
+        let negativeSum = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+          if (numbers[i] > 0) {
+            positiveCount++;
+          } else {
+            negativeSum += numbers[i];
+          }
+        }
+
+        return [
+          positiveCount,
+          negativeSum
+        ];
+      }
+
+      const numbers = [1, -2, 3, -4, 5];
+
+      const result = processNumbers(numbers);
+
+      console.log(`Positive count: ${result[0]}`);
+      console.log(`Negative sum: ${result[1]}`);
+    </script>
+  </body>
+</html>
