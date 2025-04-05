@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Adding Elements</title>
+
+  <style>
+    div.container {
+      text-align: center;
+    }
+
+    div.item {
+      height: 50px;
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 15px;
+      padding-top: 30px;
+      margin: 10px;
+    }
+
+    #add-element-btn {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="elements">
+      <div class="item">An element</div>
+    </div>
+    <button id="add-element-btn">Add element</button>
+  </div>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+      const addElementBtn = document.getElementById("add-element-btn");
+      const elementsContainer = document.getElementById("elements");
+
+      addElementBtn.addEventListener("click", function () {
+        const newElement = document.createElement("div");
+        newElement.className = "item";
+        newElement.innerText = "Another element";
+        elementsContainer.appendChild(newElement);
+      });
+    });
+  </script>
+</body>
+
+</html>
