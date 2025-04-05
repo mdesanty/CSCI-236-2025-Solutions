@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Counter</title>
+    <style>
+      .container {
+        text-align: center;
+      }
+
+      #count {
+        font-size: 1.5rem;
+        margin: 20px;
+      }
+
+      button {
+        margin: 0 5px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 7px 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Counter</h1>
+      <p id="count">0</p>
+      <button id="increment">Increment</button>
+      <button id="decrement">Decrement</button>
+      <button id="reset">Reset</button>
+    </div>
+
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', () => {
+        const countElement = document.getElementById('count');
+        const incrementBtn = document.getElementById('increment');
+        const decrementBtn = document.getElementById('decrement');
+        const resetBtn = document.getElementById('reset');
+  
+        let counter = 0;
+  
+        incrementBtn.addEventListener('click', () => {
+          counter++;
+          countElement.innerText = counter;
+        });
+  
+        decrementBtn.addEventListener('click', () => {
+          counter--;
+          countElement.innerText = counter;
+        });
+
+        resetBtn.addEventListener('click', () => {
+          counter = 0;
+          countElement.innerText = counter;
+        });
+      });
+    </script>
+  </body>
+</html>
