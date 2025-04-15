@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Useless Form</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      div.container {
+        width: 400px;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .form-control {
+        margin-bottom: 10px;
+      }
+
+      .form-radio {
+        margin-bottom: 10px;
+      }
+
+      .display-block {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .form-control label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .form-control input:not([type="checkbox"], [type="radio"]) {
+        width: 300px;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .form-control input[type="checkbox"] {
+        width: auto;
+        margin-right: 10px;
+      }
+
+      .form-control select {
+        width: 317px;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button[type="submit"] {
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <form>
+        <div class="form-control">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+
+        <div class="form-control">
+          <label for="first-name">First name</label>
+          <input type="text" class="form-control" id="first-name">
+        </div>
+
+        <div class="form-control">
+          <label for="last-name">Last name</label>
+          <input type="text" class="form-control" id="last-name">
+        </div>
+
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password">
+        </div>
+
+        <div class="form-control">
+          <label for="age">Age</label>
+          <input type="number" class="form-control" id="age">
+        </div>
+
+        <div class="form-control">
+          <label for="user-type">User type</label>
+          <select class="form-control" id="user-type">
+            <option value="coolUser">Cool User</option>
+            <option value="uncoolUser">Uncool User</option>
+            <option value="awesomeUser">Awesome user</option>
+          </select>
+        </div>
+
+        <div class="form-radio">
+          <label for="favorite-color" class="display-block">Favorite color</label>
+
+          <input type="radio" name="favorite-color" value="red" id="red">
+          <label for="red">Red</label>
+
+          <input type="radio" name="favorite-color" value="green" id="green">
+          <label for="green">Green</label>
+
+          <input type="radio" name="favorite-color" value="blue" id="blue">
+          <label for="blue">Blue</label>
+        </div>
+
+        <div class="form-control">
+          <label for="subscribe">Subscribe to updates</label>
+          <input type="checkbox" class="form-control" id="subscribe">
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
