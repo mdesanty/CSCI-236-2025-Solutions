@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Form Validation</title>
+
+  <style>
+    div.container {
+      padding: 1rem 2rem;
+    }
+
+    #my-form label {
+      display: block;
+    }
+
+    #my-form input {
+      display: block;
+      width: 15rem;
+      font-size: 0.8rem;
+      padding: 0.5rem;
+      margin-top: 0.2rem;
+
+    }
+
+    .input-error-message {
+      color: red;
+      font-size: 0.8rem;
+      margin-top: 0.2rem;
+    }
+
+    .form-control {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <form id="my-form" novalidate>
+      <h2>Form Validation</h2>
+
+      <div class="form-control">
+        <label>
+          Username
+          <input id="user-name" type="text" required minlength="5" maxlength="12"/>
+        </label>
+        <span id="user-name-error" class="input-error-message"></span>
+      </div>
+
+      <div class="form-control">
+        <label>
+          Age
+          <input id="age" type="number" required min="18" />
+        </label>
+        <span id="age-error" class="input-error-message"></span>
+      </div>
+
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+      const myForm = document.getElementById("my-form");
+
+      const userNameInput = document.getElementById("user-name");
+      const userNameErrorContainer = document.getElementById("user-name-error");
+      const ageInput = document.getElementById("age");
+      const ageErrorContainer = document.getElementById("age-error");
+
+      myForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const userName = document.getElementById("user-name").value;
+        const age = document.getElementById("age").value;
+
+        if(userNameInput.validity.valueMissing) {
+          userNameErrorContainer.textContent = "Username is required.";
+        } else if (userNameInput.validity.tooShort) {
+          userNameErrorContainer.textContent = "Username must be at least 5 characters long.";
+        } else if (userNameInput.validity.tooLong) {
+          userNameErrorContainer.textContent = "Username cannog be more than 12 characters long.";
+        } else {
+          userNameErrorContainer.textContent = "";
+        }
+
+        if (ageInput.validity.valueMissing) {
+          ageErrorContainer.textContent = "Age is required.";
+        } else if (ageInput.validity.rangeUnderflow) {
+          ageErrorContainer.textContent = "Age must be at least 18.";
+        } else {
+          ageErrorContainer.textContent = "";
+        }
+
+        if (myForm.checkValidity()) {
+          alert("Success!");
+        }
+      });
+
+      userNameInput.addEventListener("input", function () {
+        userNameErrorContainer.textContent = "";
+      });
+
+      ageInput.addEventListener("input", function () {
+        ageErrorContainer.textContent = "";
+      });
+    });
+  </script>
+</body>
+
+</html>
