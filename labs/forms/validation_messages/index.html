@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Form Validation</title>
+
+  <style>
+    div.container {
+      padding: 1rem 2rem;
+    }
+
+    #my-form label {
+      display: block;
+    }
+
+    #my-form input {
+      display: block;
+      width: 15rem;
+      font-size: 0.8rem;
+      padding: 0.5rem;
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <form id="my-form" novalidate>
+      <h2>Form Validation</h2>
+
+      <label>
+        Username
+        <input id="user-name" type="text" required minlength="5" maxlength="12" />
+      </label>
+
+      <label>
+        Age
+        <input id="age" type="number" required min="18" />
+      </label>
+
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+      const myForm = document.getElementById("my-form");
+
+      const userNameInput = document.getElementById("user-name");
+      const ageInput = document.getElementById("age");
+
+      myForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (userNameInput.validity.valueMissing) {
+          userNameInput.setCustomValidity("Username is required.");
+          userNameInput.reportValidity();
+          return;
+        } else if (userNameInput.validity.tooShort) {
+          userNameInput.setCustomValidity("Username must be less than 5 characters.");
+          userNameInput.reportValidity();
+          return;
+        } else if (userNameInput.validity.tooLong) {
+          userNameInput.setCustomValidity("Username cannot be longer than 12 characters.");
+          userNameInput.reportValidity();
+          return;
+        } else if (userNameInput.validity.valid) {
+          userNameInput.setCustomValidity("");
+        }
+
+        if(ageInput.validity.valueMissing) {
+          ageInput.setCustomValidity("Age is required.");
+          ageInput.reportValidity();
+          return;
+        } else if (ageInput.validity.rangeUnderflow) {
+          ageInput.setCustomValidity("You must be at least 18 years old.");
+          ageInput.reportValidity();
+          return;
+        } else if (ageInput.validity.valid) {
+          ageInput.setCustomValidity("");
+        }
+
+        if(myForm.checkValidity()) {
+          alert("Success!");
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
