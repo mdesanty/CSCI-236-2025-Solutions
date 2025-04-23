@@ -1,0 +1,495 @@
+{
+	"info": {
+		"_postman_id": "487acd03-5e48-487d-9079-e0d04d4036b4",
+		"name": "Michael DeSanty - Cards API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3934022",
+		"_collection_link": "https://winter-capsule-662745.postman.co/workspace/MCLA~352851f9-8e6b-469f-80ce-84fc849c0be9/collection/3934022-487acd03-5e48-487d-9079-e0d04d4036b4?action=share&source=collection_link&creator=3934022"
+	},
+	"item": [
+		{
+			"name": "Shuffle deck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1",
+					"protocol": "https",
+					"host": [
+						"deckofcardsapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"deck",
+						"new",
+						"shuffle",
+						""
+					],
+					"query": [
+						{
+							"key": "deck_count",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1",
+							"protocol": "https",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"new",
+								"shuffle",
+								""
+							],
+							"query": [
+								{
+									"key": "deck_count",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 23:48:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "935141284f76e821-ORD"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"deck_id\": \"8cl0goohoh0u\",\n    \"remaining\": 52,\n    \"shuffled\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Draw five",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://deckofcardsapi.com/api/deck/8cl0goohoh0u/draw/?count=5",
+					"protocol": "https",
+					"host": [
+						"deckofcardsapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"deck",
+						"8cl0goohoh0u",
+						"draw",
+						""
+					],
+					"query": [
+						{
+							"key": "count",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://deckofcardsapi.com/api/deck/8cl0goohoh0u/draw/?count=5",
+							"protocol": "https",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"8cl0goohoh0u",
+								"draw",
+								""
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 23:49:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "93514220fd45e821-ORD"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"deck_id\": \"8cl0goohoh0u\",\n    \"cards\": [\n        {\n            \"code\": \"0S\",\n            \"image\": \"https://deckofcardsapi.com/static/img/0S.png\",\n            \"images\": {\n                \"svg\": \"https://deckofcardsapi.com/static/img/0S.svg\",\n                \"png\": \"https://deckofcardsapi.com/static/img/0S.png\"\n            },\n            \"value\": \"10\",\n            \"suit\": \"SPADES\"\n        },\n        {\n            \"code\": \"5S\",\n            \"image\": \"https://deckofcardsapi.com/static/img/5S.png\",\n            \"images\": {\n                \"svg\": \"https://deckofcardsapi.com/static/img/5S.svg\",\n                \"png\": \"https://deckofcardsapi.com/static/img/5S.png\"\n            },\n            \"value\": \"5\",\n            \"suit\": \"SPADES\"\n        },\n        {\n            \"code\": \"JH\",\n            \"image\": \"https://deckofcardsapi.com/static/img/JH.png\",\n            \"images\": {\n                \"svg\": \"https://deckofcardsapi.com/static/img/JH.svg\",\n                \"png\": \"https://deckofcardsapi.com/static/img/JH.png\"\n            },\n            \"value\": \"JACK\",\n            \"suit\": \"HEARTS\"\n        },\n        {\n            \"code\": \"KD\",\n            \"image\": \"https://deckofcardsapi.com/static/img/KD.png\",\n            \"images\": {\n                \"svg\": \"https://deckofcardsapi.com/static/img/KD.svg\",\n                \"png\": \"https://deckofcardsapi.com/static/img/KD.png\"\n            },\n            \"value\": \"KING\",\n            \"suit\": \"DIAMONDS\"\n        },\n        {\n            \"code\": \"6S\",\n            \"image\": \"https://deckofcardsapi.com/static/img/6S.png\",\n            \"images\": {\n                \"svg\": \"https://deckofcardsapi.com/static/img/6S.svg\",\n                \"png\": \"https://deckofcardsapi.com/static/img/6S.png\"\n            },\n            \"value\": \"6\",\n            \"suit\": \"SPADES\"\n        }\n    ],\n    \"remaining\": 47\n}"
+				}
+			]
+		},
+		{
+			"name": "Reshuffle deck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://deckofcardsapi.com/api/deck/8cl0goohoh0u/shuffle/?remaining=true",
+					"protocol": "https",
+					"host": [
+						"deckofcardsapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"deck",
+						"8cl0goohoh0u",
+						"shuffle",
+						""
+					],
+					"query": [
+						{
+							"key": "remaining",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://deckofcardsapi.com/api/deck/8cl0goohoh0u/shuffle/?remaining=true",
+							"protocol": "https",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"8cl0goohoh0u",
+								"shuffle",
+								""
+							],
+							"query": [
+								{
+									"key": "remaining",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 23:50:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "93514359da7de821-ORD"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"deck_id\": \"8cl0goohoh0u\",\n    \"remaining\": 47,\n    \"shuffled\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Draw four",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://deckofcardsapi.com/api/deck/8cl0goohoh0u/draw/?count=4",
+					"protocol": "https",
+					"host": [
+						"deckofcardsapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"deck",
+						"8cl0goohoh0u",
+						"draw",
+						""
+					],
+					"query": [
+						{
+							"key": "count",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://deckofcardsapi.com/api/deck/8cl0goohoh0u/draw/?count=4",
+							"protocol": "https",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"8cl0goohoh0u",
+								"draw",
+								""
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 23:51:00 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "93514433bb38e821-ORD"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"deck_id\": \"8cl0goohoh0u\",\n    \"cards\": [\n        {\n            \"code\": \"QH\",\n            \"image\": \"https://deckofcardsapi.com/static/img/QH.png\",\n            \"images\": {\n                \"svg\": \"https://deckofcardsapi.com/static/img/QH.svg\",\n                \"png\": \"https://deckofcardsapi.com/static/img/QH.png\"\n            },\n            \"value\": \"QUEEN\",\n            \"suit\": \"HEARTS\"\n        },\n        {\n            \"code\": \"3H\",\n            \"image\": \"https://deckofcardsapi.com/static/img/3H.png\",\n            \"images\": {\n                \"svg\": \"https://deckofcardsapi.com/static/img/3H.svg\",\n                \"png\": \"https://deckofcardsapi.com/static/img/3H.png\"\n            },\n            \"value\": \"3\",\n            \"suit\": \"HEARTS\"\n        },\n        {\n            \"code\": \"9H\",\n            \"image\": \"https://deckofcardsapi.com/static/img/9H.png\",\n            \"images\": {\n                \"svg\": \"https://deckofcardsapi.com/static/img/9H.svg\",\n                \"png\": \"https://deckofcardsapi.com/static/img/9H.png\"\n            },\n            \"value\": \"9\",\n            \"suit\": \"HEARTS\"\n        },\n        {\n            \"code\": \"AH\",\n            \"image\": \"https://deckofcardsapi.com/static/img/AH.png\",\n            \"images\": {\n                \"svg\": \"https://deckofcardsapi.com/static/img/AH.svg\",\n                \"png\": \"https://deckofcardsapi.com/static/img/AH.png\"\n            },\n            \"value\": \"ACE\",\n            \"suit\": \"HEARTS\"\n        }\n    ],\n    \"remaining\": 43\n}"
+				}
+			]
+		}
+	]
+}
