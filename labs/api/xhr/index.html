@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doggo!</title>
+
+  <style>
+    #doggo-img {
+      height: 600px;
+    }
+
+    #doggo-btn {
+      padding: 8px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div>
+      <img id="doggo-img" alt="Good pupper" />
+    </div>
+
+    <button id="doggo-btn">New doggo</button>
+  </div>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+      getDoggo();
+
+      const doggoBtn = document.getElementById('doggo-btn');
+      doggoBtn.onclick = getDoggo;
+
+      const doggoImg = document.getElementById('doggo-img');
+      doggoImg.onerror = () => {
+        doggoImg.src = 'https://i.imgflip.com/849ugl.jpg';
+      }
+    });
+
+    const getDoggo = () => {
+      const xhr = new XMLHttpRequest();
+
+      xhr.onload = () => {
+        const response = xhr.response;
+
+        const doggoImg = document.getElementById('doggo-img');
+        doggoImg.src = response.url;
+      };
+
+      xhr.responseType = 'json';
+
+      xhr.open('GET', 'https://random.dog/woof.json');
+      xhr.send();
+    }
+  </script>
+</body>
+
+</html>
